@@ -1,0 +1,198 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body{
+  height: 75vh;
+}
+
+.media{
+  position: relative;
+}
+
+.container{
+  border-radius: 40px;
+  position: relative;
+  margin: 25vh auto;
+  height: 450px;
+  width: 300px;
+background: radial-gradient(circle, #000 20%, #200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.orange{
+  background-color: #f50;
+  width: 200px;
+  height: 200px;
+  border-top-right-radius: 133px;
+  border-bottom-left-radius: 200%;
+  border-top-left-radius: 40% 300px;
+  border-bottom-right-radius: 300px 30%  ;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+
+  transition: all 1s ease;
+}
+
+img{
+  left: 20px;
+  width: 200px;
+  z-index: 50;
+  position: relative;
+  margin-top: 100px;
+}
+
+.text-charmander{
+  font-size: 40px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.abajo{
+  display: none;
+  position: relative;
+  margin-top: 100px;
+
+  transition: all 1s ease;
+}
+
+.text-tamano{
+  color: #ccc;
+  font-size: 20px;
+}
+
+.button-tamano{
+  text-align: end;
+  color: #000;
+  font-size: 15px;
+  padding: 3px 5px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 20%;
+}
+
+.color{
+  width: min-content;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  align-items: center;
+}
+.text-color{
+  font-size: 20px;
+  color: #ccc;
+}
+
+.areas-color{
+  border-radius: 100%;
+  margin-top: 10px;
+  margin: 10px 5px;
+  text-align: end;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #f50;
+}
+.rojo{
+  background-color: #f00;
+}
+
+.verde{
+  background-color: #0f0;
+}
+
+.azul{
+  background-color: #00f;
+}
+
+.button-buy{
+  position: absolute;
+  left: 30px;
+  border: none;
+  color: #000;
+  font-size: 20px;
+  padding: 5px 10px;
+  background: linear-gradient(to bottom, #f50, #f30)
+}
+
+.container:hover .abajo{
+  display: block;
+  margin-top: 0;
+  animation: abaja 1s ease;
+  margin-bottom: 200px;
+}
+
+.container:not(:hover) .abajo{
+  margin-top: 100px;
+  animation: abajaun 1s ease;
+}
+
+.container:hover .orange{
+  width: 300px;
+  height: 200px;
+  border-radius: 115px 115px 100% 200%;
+}
+
+@keyframes abajaun {
+  0%{
+    margin-top: 0;
+    display: block;
+  }
+
+  10%{
+    opacity: .1;
+  }
+
+  100%{
+    margin-top: -72px;
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes abaja{
+
+  0%{
+    opacity: 0;
+    margin-top: -55px;
+    margin-bottom: 0;
+  }
+
+  50%{
+    opacity: 0.10;
+  }
+
+
+  100%{
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.button-tamano:hover{
+  background-color: #f30;
+}
+
+.button-tamano:active{
+  background-color: #810;
+}
+
+.button-buy:hover{
+  background: linear-gradient(to bottom, #f50, #f80);
+}
+
+.button-buy:active{
+  background: linear-gradient(to bottom, #f80, #f50);
+}
+
+
+.areas-color:active{
+  border: solid 1px #222;
+}
